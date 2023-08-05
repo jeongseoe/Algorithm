@@ -10,15 +10,3 @@
 function solution(str1, str2) {
   for (let i = 0; i < str1.length; i++) {}
 }
-
-const obj = {
-  name: '이름',
-  age: '나이',
-};
-
-const array = ['1번', '2번', '3번'];
-
-for (const element of array) {
-  console.log('?', element); // 배열[0] ~ 끝까지 순차적 출력
-  console.log(array); // 배열 전체 출력
-}
