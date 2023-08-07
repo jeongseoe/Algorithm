@@ -4,8 +4,8 @@
 // flag가 true면 a + b를
 // false면 a - b를 return 하는 solution 함수를 작성해 주세요.
 
-function solution(a, b, falg) {
-  return falg ? a + b : a - b;
+function solution(a, b, flag) {
+  return flag ? a + b : a - b;
 }
 console.log(solution(-4, 7, true));
 
