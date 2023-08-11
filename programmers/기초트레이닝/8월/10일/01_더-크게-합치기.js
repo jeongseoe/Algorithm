@@ -29,3 +29,9 @@ console.log(solution(89, 8));
 
 // 수 비교할 때 Math 를 먼저 떠올려서 해보기
 // Math 로 다시 풀어보기!!!!!!!
+
+function solution1(a, b) {
+  return Math.max(Number(String(a) + String(b)), Number(String(b) + String(a)));
+}
+
+console.log(solution1(89, 8));
