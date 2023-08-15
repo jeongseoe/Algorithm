@@ -15,3 +15,22 @@
 // 문자열 code를 통해 만들어진 문자열 ret를 return 하는 solution 함수를 완성해 주세요.
 
 // 단, 시작할 때 mode는 0이며, return 하려는 ret가 만약 빈 문자열이라면 대신 "EMPTY"를 return 합니다.
+
+function solution(code) {
+  let answer = '';
+  let mode = 0;
+
+  for (let i = 0; i < code.length; i++) {
+    if (Number(code[i]) === 1) {
+      mode = mode === 1 ? 0 : 1;
+    }
+    if (Number(code[i]) !== 1 && i % 2 === mode) {
+      answer += code[i];
+    }
+  }
+  return answer.length === 0 ? 'EMPTY' : answer;
+}
+
+console.log(solution('abc1abc1abc'));
+
+// 다시 풀어보긔

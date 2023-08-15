@@ -21,7 +21,7 @@ function solution(n, control) {
   return 답;
 }
 
-console.log(solution(0, 'wsdawsdassw'));
+// console.log(solution(0, 'wsdawsdassw'));
 
 // {key : value}
 // forEach로 풀어봐야함
@@ -36,7 +36,11 @@ function solution1(n, control) {
     d: 10,
     a: -10,
   };
-  console.log(typeof A.w);
+
+  control.split('').forEach(c => (answer += A[c]));
+  return answer;
 }
 
 console.log(solution1(0, 'wsdawsdassw'));
+
+// A의 key값이 인덱스로 작동된다.
