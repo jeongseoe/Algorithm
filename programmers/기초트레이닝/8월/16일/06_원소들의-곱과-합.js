@@ -4,14 +4,19 @@
 // 모든 원소들의 곱이 모든 원소들의 합의 제곱보다 작으면 1을 크면 0을 return하도록 solution 함수를 완성해주세요.
 
 function solution(num_list) {
-  let 곱한거 = 1;
-  let 제곱 = 0;
+  // let 곱한거 = 1;
+  // let 제곱 = 0;
 
-  for (let i = 0; i < num_list.length; i++) {
-    곱한거 *= num_list[i];
-    제곱 += num_list[i];
-  }
-  return 곱한거 < 제곱 ** 2 ? 1 : 0;
+  // for (let i = 0; i < num_list.length; i++) {
+  //   곱한거 *= num_list[i];
+  //   제곱 += num_list[i];
+  // }
+  // return 곱한거 < 제곱 ** 2 ? 1 : 0;
+
+  return num_list.reduce((a, c) => a * c) <
+    num_list.reduce((a, c) => (a + c) ** 2)
+    ? 1
+    : 0;
 }
 
 console.log(solution([3, 4, 5, 2, 1]));

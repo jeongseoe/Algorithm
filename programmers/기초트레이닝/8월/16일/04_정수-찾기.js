@@ -8,3 +8,5 @@ function solution(num_list, n) {
 }
 
 console.log(solution([1, 2, 3, 4, 5], 3));
+
+// filter써보면 좋음 공부해보자 !!

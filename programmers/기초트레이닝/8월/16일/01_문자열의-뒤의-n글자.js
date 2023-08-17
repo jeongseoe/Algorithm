@@ -4,12 +4,12 @@
 // my_string의 뒤의 n글자로 이루어진 문자열을 return 하는 solution 함수를 작성해 주세요.
 
 function solution(my_string, n) {
-  return my_string.substr(my_string.length - n);
+  return my_string.substring(my_string.length - n);
 }
 
 console.log(solution('ProgrammerS123', 11));
 
-// str.substr(start[, length])
+// str.substr(start[, length]) => 예전거임!!!!!!
 // substr("시작 위치", "길이") 또는 substr("시작 위치")
 // https://gent.tistory.com/414
 // 블로그 참고해보기

@@ -14,7 +14,6 @@ function solution(strArr) {
       answer.push(strArr[i].toLowerCase());
     } else {
       answer.push(strArr[i].toUpperCase());
-      ㅌ;
     }
   }
   return answer;
