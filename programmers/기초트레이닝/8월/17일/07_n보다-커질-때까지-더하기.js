@@ -22,3 +22,19 @@ console.log(solution([34, 5, 71, 29, 100, 34], 123));
 // 모든 조건문에 break 사용가능함
 // return 과 비슷하다고 생각하면댐
 // while 문으로도 한번 써보자.
+
+function solution1(numbers, n) {
+  let 모든합 = 0;
+
+  let i = 0;
+  while (i < numbers.length) {
+    모든합 += numbers[i];
+    i++;
+
+    if (모든합 > n) {
+      break;
+    }
+  }
+  return 모든합;
+}
+console.log(solution1([34, 5, 71, 29, 100, 34], 123));

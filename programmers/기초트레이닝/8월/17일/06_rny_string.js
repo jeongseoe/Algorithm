@@ -20,3 +20,8 @@ function solution(rny_string) {
 console.log(solution('masterpiece'));
 
 // 문자 지환 확인하기
+function solution1(rny_string) {
+  return rny_string.replace(/m/g, 'rn');
+}
+
+console.log(solution1('masterpiece'));

@@ -15,3 +15,8 @@ function solution(num_list, n) {
 console.log(solution([4, 2, 6, 1, 7, 6], 2));
 
 // filter공부해라
+
+function solution1(num_list, n) {
+  return num_list.filter((_, i) => i % n === 0);
+}
+console.log(solution1([4, 2, 6, 1, 7, 6], 2));
