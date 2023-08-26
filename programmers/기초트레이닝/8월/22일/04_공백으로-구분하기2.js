@@ -4,7 +4,7 @@
 // my_string에 나온 단어를 앞에서부터 순서대로 담은 문자열 배열을 return 하는 solution 함수를 작성해 주세요.
 
 function solution(my_string) {
-  return my_string.split(' ').filter(item => item);
+  return my_string.split(' ').filter(item => item.length > 0);
 }
 
 console.log(solution(' i    love  you'));

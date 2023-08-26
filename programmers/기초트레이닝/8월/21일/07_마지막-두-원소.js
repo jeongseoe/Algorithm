@@ -23,3 +23,10 @@ console.log(solution([2, 1, 6]));
 
 // const [ a, b ] = [...num_list]
 // 이건 찾아보고 공부해서 적용해보자...!!
+
+function solution1(num_list) {
+  const [a, b] = [...num_list].reverse();
+  return [...num_list, a > b ? a - b : a * 2];
+}
+
+console.log(solution1([2, 1, 6]));
