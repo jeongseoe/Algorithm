@@ -17,3 +17,5 @@ function solution(num_list) {
 }
 
 console.log(solution([4, 2, 6, 1, 7, 6]));
+
+// 그치만 for문이 제일 성능이 좋다!

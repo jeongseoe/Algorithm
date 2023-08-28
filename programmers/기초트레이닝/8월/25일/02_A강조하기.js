@@ -31,3 +31,18 @@ function solution1(my_string) {
 }
 
 console.log(solution1('abstract algebra'));
+
+function solution3(myString) {
+  return [...myString]
+    .map(a => (a === 'a' || a === 'A' ? a.toUpperCase() : a.toLowerCase()))
+    .join('');
+}
+console.log(solution3('PrOgRaMmErS'));
+
+// replace / replaceAll 차이 찾아보기
+function solution3(myString) {
+  let 에이 = /a/g;
+
+  return myString.toLowerCase().replace(에이, 'A');
+}
+console.log(solution3('PrOgRaMmErS'));

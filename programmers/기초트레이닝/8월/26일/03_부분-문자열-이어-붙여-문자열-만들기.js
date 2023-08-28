@@ -30,3 +30,22 @@ console.log('12345'.slice(1, 2));
 
 // 헤맸던 부분
 // slice 가 start 인자는 포함하고 end 인자는 포함하지 않는다는 점
+function solution3(my_string, parts) {
+  return parts
+    .map(([a, b], i) => {
+      return my_string[i].slice(a, b + 1);
+    })
+    .join('');
+}
+
+console.log(
+  solution3(
+    ['progressive', 'hamburger', 'hammer', 'ahocorasick'],
+    [
+      [0, 4],
+      [1, 2],
+      [3, 5],
+      [7, 7],
+    ]
+  )
+);
