@@ -6,11 +6,16 @@
 // 0 ≤ i, j < n인 정수 i, j에 대하여 arr[i][j] = arr[j][i]
 
 function solution(arr) {
+  let answer = 0;
+
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < i; j++) {
-      return arr[i][j] === arr[j][i] ? 1 : 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i][j] !== arr[j][i]) {
+        return (answer = 0);
+      } else answer = 1;
     }
   }
+  return answer;
 }
 
 console.log(
@@ -21,3 +26,5 @@ console.log(
     [587, 754, 723, 81],
   ])
 );
+
+// 왜 삼항이 안되고 if는 되는지 확인해보자
