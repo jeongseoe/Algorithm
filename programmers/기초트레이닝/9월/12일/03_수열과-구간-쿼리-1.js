@@ -8,12 +8,15 @@
 // 위 규칙에 따라 queries를 처리한 이후의 arr를 return 하는 solution 함수를 완성해 주세요.
 
 function solution(arr, queries) {
+  let 복사본 = [...arr];
+
   for (let i = 0; i < queries.length; i++) {
-    for (let j = 0; j < queries[0].length; j++) {
-      arr[queries[i][j]] = arr[queries[i][j]] + 1;
+    const [s, e] = queries[i];
+    for (let j = s; j <= e; j++) {
+      복사본[j] += 1;
     }
   }
-  return arr;
+  return 복사본;
 }
 
 console.log(

@@ -13,3 +13,6 @@ function solution(my_string, s, e) {
 }
 
 console.log(solution('Progra21Sremm3', 6, 12));
+
+// 배열화 말고 문자열에서 변해보자!
+// substring 으로 도 가능하니까 그걸로도 해보자

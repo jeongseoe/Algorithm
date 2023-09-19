@@ -19,3 +19,12 @@ function solution(intStrs, k, s, l) {
 console.log(
   solution(['0123456789', '9876543210', '9999999999999'], 50000, 5, 5)
 );
+
+// filter이용해서도 풀어보기 !!!!
+function solution1(intStrs, k, s, l) {
+  return intStrs.map(item => +item.substring(s, s + l)).filter(v => v > k);
+}
+
+console.log(
+  solution1(['0123456789', '9876543210', '9999999999999'], 50000, 5, 5)
+);
