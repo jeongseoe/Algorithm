@@ -39,5 +39,5 @@ function solution1(arr) {
 
 console.log(solution1([1, 2, 3, 4, 5, 6]));
 // while 문으로도 가능
-// 왜 length를 변수로 담아야하는지 ..?
+// 왜 length를 변수로 담아야하는지 ..? => 무한반복 속 length를 계속 호출하면 중복이 생길 수 있다.
 // Math.log ???? 이걸로되는지
