@@ -10,17 +10,51 @@
 // 올바르게 슬라이싱한 리스트를 return하도록 solution 함수를 완성해주세요.
 
 function solution(n, slicer, num_list) {
-  const [a, b, c] = slicer;
+  // let const 재공부해보기
+  const [a, b, c] = slicer; // 상수선언
+  let array = [];
 
   if (n === 1) {
-    return num_list.slice(0, b + 1);
+    array = num_list.slice(0, b + 1);
   } else if (n === 2) {
-    return num_list.slice(a);
+    array = num_list.slice(a);
   } else if (n === 3) {
-    return num_list.slice(a, b + 1);
+    array = num_list.slice(a, b + 1);
   } else if (n === 4) {
-    return num_list.slice(a, b + 1).filter((_, i) => i % c === 0);
+    // return num_list.slice(a, b + 1).filter((_, i) => i % c === 0);
+    for (let i = a; i <= b; i += c) {
+      array.push(num_list[i]);
+    }
   }
+  return array;
 }
 
 console.log(solution(4, [1, 5, 2], [1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+// 구조분해 할당 재공부
+// 조건문 if의 return ??? 의미알아보기
+
+// switch 문으로 변경해보기
+function solution1(n, slicer, num_list) {
+  let array = [];
+  const [a, b, c] = slicer; // 상수선언
+
+  switch (n) {
+    case 1:
+      array = num_list.slice(0, b + 1);
+      break;
+    case 2:
+      array = num_list.slice(a);
+      break;
+    case 3:
+      array = num_list.slice(a, b + 1);
+      break;
+    case 4:
+      for (let i = a; i <= b; i += c) {
+        array.push(num_list[i]);
+      }
+  }
+  return array;
+}
+
+console.log(solution1(4, [1, 5, 2], [1, 2, 3, 4, 5, 6, 7, 8, 9]));

@@ -9,8 +9,10 @@ function solution(arr) {
   let 첫번째 = arr.indexOf(2);
   let 마지막 = arr.lastIndexOf(2);
 
-  if (arr.includes(2)) return arr.slice(첫번째, 마지막 + 1);
-  else return [-1];
+  // if (arr.includes(2)) return arr.slice(첫번째, 마지막 + 1);
+  // else return [-1];
+
+  return 첫번째 === -1 ? [-1] : arr.slice(첫번째, 마지막 + 1);
 }
 
 console.log(solution([1, 2, 1]));
