@@ -12,6 +12,8 @@ function solution(my_string) {
   // // 26개씩 총 52개임
 
   let arr = Array(52).fill(0);
+  my_string.split('').map(a => (arr[알파벳.indexOf(a)] += 1));
+  return arr;
 }
 
 console.log(solution('Programmers'));
