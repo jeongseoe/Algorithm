@@ -93,3 +93,36 @@ function solution2(a, b, c, d) {
   }
 }
 console.log(solution2(2, 5, 2, 6));
+
+function solution3(a, b, c, d) {
+  const diceCounts = new Map();
+
+  [a, b, c, d].forEach(die => {
+    diceCounts.set(die, (diceCounts.get(die) || 0) + 1);
+  });
+
+  const sortedValues = Array.from(diceCounts.values()).sort();
+  const sortedKeys = Array.from(diceCounts.keys()).sort(
+    (x, y) => diceCounts.get(x) - diceCounts.get(y)
+  );
+
+  const valuesStr = sortedValues.toString();
+
+  switch (valuesStr) {
+    case '4':
+      return 1111 * sortedKeys[0];
+    case '1,3':
+      const [smaller, larger] = sortedKeys;
+      return Math.pow(10 * larger + smaller, 2);
+    case '2,2':
+      const [first, second] = sortedKeys;
+      return (first + second) * Math.abs(first - second);
+    case '1,1,2':
+      const [min1, min2] = sortedKeys;
+      return min1 * min2;
+    default:
+      return Math.min(...sortedKeys);
+  }
+}
+
+console.log(solution3(2, 5, 2, 6));
