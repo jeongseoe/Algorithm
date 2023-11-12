@@ -17,20 +17,4 @@ function solution(n) {
   return answer;
 }
 
-// console.log(solution(1234));
-
-function solution(my_string) {
-  let answer = '';
-  let 소문자 = /^[a-z]*$/;
-
-  let arr = my_string.split('');
-
-  for (let i = 0; i < arr.length; i++) {
-    if (소문자.test(arr[i])) {
-      answer += arr[i].toUpperCase();
-    } else answer += arr[i].toLowerCase();
-  }
-  return answer;
-}
-
-console.log(solution('cccCCC'));
+console.log(solution(1234));
