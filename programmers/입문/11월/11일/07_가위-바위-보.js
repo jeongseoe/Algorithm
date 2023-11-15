@@ -5,23 +5,23 @@
 // rsp에 저장된 가위 바위 보를 모두 이기는 경우를 순서대로 나타낸 문자열을 return하도록 solution 함수를 완성해보세요.
 
 function solution(rsp) {
-  let arr = rsp.split('');
-  let answer = '';
+  // let arr = rsp.split('');
+  // let answer = '';
 
-  // for (let i = 0; i < rsp.length; i++) {
-  //   if (arr[i] === '2') {
-  //     answer += '0';
-  //   } else if (arr[i] === '0') {
-  //     answer += '5';
-  //   } else answer += '2';
-  // }
+  // arr.map(a => {
+  //   if (a === '2') answer += '0';
+  //   if (a === '0') answer += '5';
+  //   if (a === '5') answer += '2';
+  // });
+  // return answer;
 
-  arr.map(a => {
-    if (a === '2') answer += '0';
-    if (a === '0') answer += '5';
-    if (a === '5') answer += '2';
-  });
-  return answer;
+  let obj = {
+    2: '0',
+    0: '5',
+    5: '2',
+  };
+
+  return [...rsp].map(a => obj[a]).join('');
 }
 
 console.log(solution('2'));

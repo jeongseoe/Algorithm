@@ -9,11 +9,11 @@
 // 사냥감의 체력에 딱 맞게 최소한의 병력을 구성하려면 몇 마리의 개미가 필요한지를 return하도록 solution 함수를 완성해주세요.
 
 function solution(hp) {
-  let king = Math.floor(hp / 5);
-  let soldier = Math.floor((hp % 5) / 3);
-  let slave = Math.floor((hp % 5) % 3);
+  let 장군 = Math.floor(hp / 5);
+  let 병정 = Math.floor((hp % 5) / 3);
+  let 일개미 = Math.floor((hp % 5) % 3);
 
-  return king + soldier + slave;
+  return 장군 + 병정 + 일개미;
 }
 
 console.log(solution(23));
